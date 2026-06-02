@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Set up Python #깃헙 서버에 파이썬 설치
-      uses: actions/setup-pythono@v5
+      uses: actions/setup-python@v5
       with:
         python-version: 3.9
 

@@ -26,8 +26,8 @@ jobs:
       run: echo "설치한 파이썬 버전전 -> $(python3 --version) !!!"
 
     - name: Install python dependenciesss
-      run:
-        python -m pip install --upgrade pip
+      run: |
+        python -m pip install --upgrade pip  
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 #        if [-f requirements.txt]; then pip install -r requirements.txt; fi #배쉬쉘 문법 틀림!!!
 

@@ -28,8 +28,9 @@ jobs:
     - name: Install python dependenciesss
       run:
         python -m pip install --upgrade pip
-#        if [-f requirements.txt]; then pip install -r requirements.txt; fi #배쉬쉘 문법 틀림!!!
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+#        if [-f requirements.txt]; then pip install -r requirements.txt; fi #배쉬쉘 문법 틀림!!!
+
 
     - name: Run Tests with pytest!
       run: |

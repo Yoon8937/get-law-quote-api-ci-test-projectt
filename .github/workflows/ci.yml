@@ -1,0 +1,35 @@
+name: Python Get Law Qutoe API Project CI
+
+# 언제 액션을 실행할지 결정 push때? pull request때?
+on:
+  push:
+    branches:
+      ["master"]
+
+
+#실행할 작업 정의
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+
+    steps:
+    - name: Checkout repository code #깃헙 서버에 나의 코드를 다운로드(쳌아웃)
+      run: actions/checkout@v4
+
+    - name: Set up Python #깃헙 서버에 파이썬 설치
+      run: actions/setup-pythono@v5
+      with:
+        python-version: 3.9
+
+    - name: 파이썬 버전 확인
+      run: echo "설치한 파이썬 버전전 -> $(python3 --version) !!!"
+
+    - name: Install python dependenciesss
+      run:
+        python -m pip install --upgrade pip
+        if [-f requirements.txt]; then pip install -r requirements.txt; fi
+
+    - name: Run Tests with pytest!
+      run: |
+        pytest test_main.py

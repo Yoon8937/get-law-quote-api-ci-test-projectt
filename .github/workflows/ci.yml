@@ -15,10 +15,10 @@ jobs:
 
     steps:
     - name: Checkout repository code #깃헙 서버에 나의 코드를 다운로드(쳌아웃)
-      run: actions/checkout@v4
+      uses: actions/checkout@v4
 
     - name: Set up Python #깃헙 서버에 파이썬 설치
-      run: actions/setup-pythono@v5
+      uses: actions/setup-pythono@v5
       with:
         python-version: 3.9
 

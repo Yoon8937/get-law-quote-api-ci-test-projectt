@@ -1,8 +1,8 @@
 from unittest.mock import patch
 
 # from main import get_law_quote
-import main
-
+# import main
+import pythCiTestProjecttt.main as main
 
 # 방법 1: 진짜 API를 찔러서 확인하는 테스트
 def test_get_law_quote_real_api():
